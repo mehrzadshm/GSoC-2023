@@ -1,8 +1,8 @@
-title: Just the Docs Template
+title: Neural QA with DBpedia
 description: A starter template for a Jeykll site using the Just the Docs theme!
 theme: just-the-docs
 
 url: https://mehrzadshm.github.io/GSoC-2023
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Project's GitHub Repo: https://github.com/dbpedia/neural-qa
