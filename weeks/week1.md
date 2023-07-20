@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Week 1
-nav_order: 2
 ---
 
 # Week 1
@@ -12,8 +11,10 @@ nav_order: 2
 
 
 
+## Insights
 
----
+
+
 ## Next week plan
 
 
