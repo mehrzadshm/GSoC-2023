@@ -16,7 +16,7 @@ While the roadmap for the project implementation may appear straightforward at f
 - Which model size yields the best results?
 - How can we effectively augment user input as a prompt to provide clues for relevant DBpedia entities?
 - What training approach should we employ?
-    - Few-shot learning
+    - Zero/Few-shot learning
     - Adding a translation head with/without fine-tuning
     - Fine-tunning with general SPARQL queries
     - Fine-tuning with DBpedia-specific SPARQL queries 
