@@ -19,15 +19,15 @@ While the roadmap for the project implementation may appear straightforward at f
     - Few-shot learning
     - Adding a translation head with/without fine-tuning
     - Fine-tunning with general SPARQL queries
-    - Fine-tuning with DBpedia-specific SPARQL queirs designated to  knowledge graphs 
+    - Fine-tuning with DBpedia-specific SPARQL queries 
 
-In the course of my research on answeering these questions, I came across [NSQL] project. It shares a similar vision to my GSoC project, as it aims to train foundation models explicitly for SQL query generation. The discovery of the NSQL project has provided valuable insights that will further guide our design decisions in the upcoming weeks. Inspired by their approach, a promising avenue is to fine-tune one of the CodeGen variants with a large courpos of general SPARQL queries (formal statements) and then further fine-tune the model with DBPedia-specific SPARQL queries. 
+In the course of my research on answering these questions, I came across [NSQL] project. It shares a similar vision to my GSoC project, as it aims to train foundation models explicitly for SQL query generation. The discovery of the NSQL project has provided valuable insights that will further guide our design decisions in the upcoming weeks. Inspired by their approach, a promising avenue is to fine-tune one of the CodeGen variants with a large courpos of general SPARQL queries (formal statements) and then further fine-tune the model with DBPedia-specific SPARQL queries. 
 
 
 
 
 ## Next week plan
-For the upcoming week, the plan is to dive deeper into CodeGen and NSQL models as a deep understanding of their nuances will be instrumental for our project. We aim to inspect their different variants, identify their training methodologies.
+For the upcoming week, the plan is to dive deeper into CodeGen and NSQL models as a deep understanding of their nuances will be instrumental for our project. We aim to inspect the data and approches used for pre-training selected modesl.
 
 ----
 [CodeGen]: https://huggingface.co/docs/transformers/model_doc/codegen
