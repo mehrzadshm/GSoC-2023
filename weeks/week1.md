@@ -3,7 +3,7 @@ layout: default
 title: Week 1
 ---
 
-# Week 1
+# Week 1 - Revisit project roadmap
 
 ---
 
