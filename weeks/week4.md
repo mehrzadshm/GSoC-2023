@@ -19,7 +19,6 @@ This week we revisited the challenge we encountered last week, that is, taking c
 
 ```
 [In]
-
 eos_token = tokenizer.eos_token
 eos_token_id = tokenizer.eos_token_id
 
@@ -39,7 +38,6 @@ if eos_token_id not in inputs['input_ids'][0]:
 
 ```
 [Out]
-
 End of Sequence token:	<|endoftext|>	 with id=0
 
 {'input_ids': tensor([[ 8197,   438,   322, 18926,   432, 45600,    49,   203,  4620,  1018,
@@ -54,13 +52,8 @@ No EOS token found in tokenized input
 
 
 
-
-
-
-
 ```
 [In]
-
 prompt_without_eos = """
 Compelete "SPARQL" by translating "question" into a SPARQL query usig DBpedia prefixes below:
 PREFIX dbr: <http://dbpedia.org/resource/>
@@ -177,7 +170,7 @@ Pre-processesd query tokenization =>  SELECT ?capital WHERE { dbr:France dbo:cap
 The above example shows the importance of taking the required time to deeply understand the limitations of the pre-trained tokenizer for the task at hand.
 > **TODO**: SPARQL queries with more complex syntax need to be tested against the tokenizers!
 
----- 
+---
 
 Finally, the above examples reveal a critical challenge we were expecting to encounter since the begging of the project: how can we effectively map the named entities with their corresponding DBpedia resources. For example,  as it can be seen above the model failed to map "USA" with the correct DBpedia resource `dbr:United_States`. Addressing this problem is a *priority* for us, as the correct mapping to DBpedia entity URIs are pivotal for the accurate generation of SPARQL queries. We are actively exploring potential solutions for this problem. 
 
