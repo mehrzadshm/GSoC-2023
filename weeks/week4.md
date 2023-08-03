@@ -16,9 +16,8 @@ The fourth week of my GSoC journey started by focusing on refining the *formatti
 This week we revisited the challenge we encountered last week, that is, taking control of the length of the generated sequences. The soloution seems to be lied within the proper use of special tokens, in particular, `EOS` (End Of Sequence) token. The preassumption was that the tokenizer *might* automatically add special tokens to the input sequence. However, we observed despite using the `tokenizer.encode_plus` method, EOS token is not presented within the encoded input sequence. The following code blocks refer to our experiemnts with the `bigcode/starcoderbase-3b` checkpoint. 
 
 
-
+`[In]:`
 ```
-`[In:]`
 eos_token = tokenizer.eos_token
 eos_token_id = tokenizer.eos_token_id
 
@@ -35,9 +34,8 @@ if eos_token_id not in inputs['input_ids'][0]:
     print(f'\nNo EOS token found in tokenized input')
 ```
 
-
+`[Out]:`
 ```
-[Out]
 End of Sequence token:	<|endoftext|>	 with id=0
 
 {'input_ids': tensor([[ 8197,   438,   322, 18926,   432, 45600,    49,   203,  4620,  1018,
@@ -48,12 +46,11 @@ End of Sequence token:	<|endoftext|>	 with id=0
 No EOS token found in tokenized input
 ```
 
-> **Note:**For more details, check out the notebook in the [dedicated repo directory].
+> **Note:** For more details, check out the notebook in the [dedicated repo directory].
 
 
-
+`[In]:`
 ```
-`[In:]`
 prompt_without_eos = """
 Compelete "SPARQL" by translating "question" into a SPARQL query usig DBpedia prefixes below:
 PREFIX dbr: <http://dbpedia.org/resource/>
@@ -100,9 +97,8 @@ outputs = model.generate(
 print('After adding EOS:\n', tokenizer.decode(outputs[0]))
 ```
 
-
+`[Out]:`
 ```
-[Out]
 Before adding EOS:
  
 Compelete "SPARQL" by translating "question" into a SPARQL query usig DBpedia prefixes below:
@@ -146,9 +142,8 @@ As can be seen, when adding EOS tokens manually, although `max_new_tokens` is se
 
 Another key observation was that the tokenizer is not recognizing the space at certain positions, e.g., before `"."` and `"?"`.  One possibile explanation is that the tokenizer was trained on a dataset where such spaces were not common and hence it's not preserving them. This theory particularly makes sensne for spaces around `"."` char as it is not common in the majority of programming laguages. Our proposed soloution was to perform pre-processing; adding extra spaces at problematic positions. This way, when the tokenizer processes the text, it will treat the punctuation chars as separate tokens.
 
-
+`[In]:`
 ```
-`[In:]`
 # Fixing mis-tokenized spaces around "?" and "." tokens
 
 sparql_query = "SELECT ?capital WHERE { dbr:France dbo:capital ?capital .}"
@@ -160,9 +155,8 @@ sparql_query = sparql_query.replace("?", " ?").replace(".", " . ")
 inputs = tokenizer.encode_plus(sparql_query, return_tensors="pt")
 print('Pre-processesd query tokenization => ', tokenizer.decode(inputs['input_ids'][0]))
 ```
-
+`[Out]:`
 ```
-[Out]
 Raw query tokenization =>  SELECT?capital WHERE { dbr:France dbo:capital?capital.}
 Pre-processesd query tokenization =>  SELECT ?capital WHERE { dbr:France dbo:capital ?capital . }
 ```
@@ -180,7 +174,7 @@ Alternatively, we can develop an **entity recognition and linking (disambiguatio
 
 An effective way to incorporate the results of an explicit entity linking module within our seq2seq flow could be to preprocess the input questions before feeding them to the seq2seq model. Here's how we think this could work:
 
-1. **Entity linking:** First, process each natural language question using the entity linking module to identify entities in the question and replace each entity with its DBpedia URI. For example:
+1. **Entity linking:** Processing each natural language question using the entity linking module to identify and replace each entity with its DBpedia URI. For example:
 
     >`In:  What is the capital of France?`
 
@@ -192,3 +186,5 @@ An effective way to incorporate the results of an explicit entity linking module
 
 ----
 [StarCoder models by BigCode]: https://huggingface.co/bigcode
+[dedicated repo directory]: https://github.com/dbpedia/neural-qa/tree/gsoc-mehrzad/gsoc/mehrzad
+
