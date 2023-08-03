@@ -18,7 +18,7 @@ This week we revisited the challenge we encountered last week, that is, taking c
 
 
 ```
-[In]
+`[In:]`
 eos_token = tokenizer.eos_token
 eos_token_id = tokenizer.eos_token_id
 
@@ -53,7 +53,7 @@ No EOS token found in tokenized input
 
 
 ```
-[In]
+`[In:]`
 prompt_without_eos = """
 Compelete "SPARQL" by translating "question" into a SPARQL query usig DBpedia prefixes below:
 PREFIX dbr: <http://dbpedia.org/resource/>
@@ -148,7 +148,7 @@ Another key observation was that the tokenizer is not recognizing the space at c
 
 
 ```
-[In]
+`[In:]`
 # Fixing mis-tokenized spaces around "?" and "." tokens
 
 sparql_query = "SELECT ?capital WHERE { dbr:France dbo:capital ?capital .}"
