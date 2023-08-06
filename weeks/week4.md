@@ -3,7 +3,7 @@ layout: default
 title: Week 4
 ---
 
-# Week 4 - In progress ...  
+# Week 4 - The devil is "always" in the detail!
 
 ---
 
@@ -182,6 +182,12 @@ An effective way to incorporate the results of an explicit entity linking module
 
 2. **Train Seq2Seq model:** Feeding the processed question into our seq2seq model that has been trained to generate SPARQL queries from questions that have already been processed with the entity linking module. This way, the model doesn't have to learn to perform entity recognition and linking itself; it can focus on generating the rest of the SPARQL query.
 
+
+## Next week plan
+For the upcoming week, our plan is to:
+- Process existing datasets for creating our intended prompt-tuning dataset.
+- Explore exisiting models that can be used for DBpedia entity resoloution. 
+- Search for instruct-tuned versions of code generation models. 
 
 
 ----
