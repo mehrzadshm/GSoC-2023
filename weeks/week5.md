@@ -3,7 +3,7 @@ layout: default
 title: Week 5
 ---
 
-# Week 5 - Gearing Up for Prompt Fine-tuning ⚙️
+# Week 5 - Gearing Up for Fine-tuning ⚙️
 
 ---
 
