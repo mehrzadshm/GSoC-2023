@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Week 6
+title: Week 6- Data preperation
 ---
 
 # Week 6 - Data preperation 📄

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Week 4
+title: Week 4- The devil is "always" in the detail!
 ---
 
 # Week 4 - The devil is "always" in the detail! 🔬

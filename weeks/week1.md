@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Week 1
+title: Week 1- Revisit project roadmap
 ---
 
-# Week 1 - Revisit project roadmap
+# Week 1 - Revisit project roadmap 🛣️
 
 ---
 

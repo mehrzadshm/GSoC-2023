@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Week 2
+title: Week 2- A closer look at CodeGen 
 ---
 
-# Week 2 - A closer look at CodeGen 
+# Week 2 - A closer look at CodeGen 🔍 
 
 ---
 
