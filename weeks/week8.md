@@ -65,7 +65,7 @@ The model inconsistently prefixes main SPARQL tokens with the phrase `Answer:`, 
 
 Having our evaluation script polished this week, for the week ahead we will focus on: 
 
-- **Post-Processing Improvements:** This is essential for performing a realistic evaluation based on the Bleu metric. Specifically, we aim to remove all redundant tokens ( (e.g. <|endoftext|>)) and adjust spacing issues within the generated queries.
+- **Post-Processing Improvements:** This is essential for performing a realistic evaluation based on the Bleu metric. Specifically, we aim to remove all redundant tokens (e.g. \<\|endoftext\|\>) and adjust spacing issues within the generated queries.
 
 - **Checkpoint Evaluation:** Complete the evaluation for the last saved checkpoint, after post-processed generated sequences.
 
