@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Week 8- Checkpoint Reviews; Streamlining Evaluation & Post-Processing
+title: Week 8- Checkpoint Reviews; Streamlining Evaluation 
 ---
 
-# Week 8- Checkpoint Reviews: Streamlining Evaluation & Post-Processing
+# Week 8- Checkpoint Reviews: Streamlining Evaluation 📝
 
 ---
 
