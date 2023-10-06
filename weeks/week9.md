@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Week 9-  
+title: Week 9- Diving Deeper into Evaluation  
 ---
 
 # Week 9- Diving Deeper into Evaluation and Post-Processing 🤿
@@ -83,7 +83,5 @@ The ninth week of the project was mainly focused on refining the evaluation proc
 - **Expand evaluation:** Now that we have a refined evaluation module and improved post-processing, the plan is to extend the evaluation to include a larger set of test data to better understand the model's strengths and weaknesses.
 
 - **Optimizing model training:** Insights from this week's evaluation will be fed back into the training process to improve the next round of model training.
-
-
 
 ----
